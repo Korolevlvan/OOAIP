@@ -10,5 +10,6 @@ namespace Lab1
   {
     public Vector Position { get; set; }
     public Vector Velocity { get;  }
+    public MoveAbility MoveAbility { get; }
   }
 }

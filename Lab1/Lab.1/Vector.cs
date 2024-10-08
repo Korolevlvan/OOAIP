@@ -36,5 +36,13 @@ namespace Lab1
     {
       return coordinates.GetHashCode();
     }
+    public static Vector IsNotNull(Vector a)
+    {
+      if (a.coordinates.Length == 0)
+      {
+        throw new System.Exception();
+      }
+      return a;
+    }
   }
 }

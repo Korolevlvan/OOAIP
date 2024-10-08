@@ -19,5 +19,17 @@ namespace Lab1
         {
           move.Position += move.Velocity;
         }
-    }
+        public void Check()
+        {
+          Vector.IsNotNull(move.Position);
+          Vector.IsNotNull(move.Velocity);
+        }
+        public void MoveAbilityCheck()
+        {
+          if (move.MoveAbility == new MoveAbility(false))
+          {
+            throw new System.Exception();
+          }
+        }
+  }
 }
