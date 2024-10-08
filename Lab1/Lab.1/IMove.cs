@@ -9,6 +9,6 @@ namespace Lab1
   public interface IMove
   {
     public Vector Position { get; set; }
-    public Vector Velocity { get; }
+    public Vector Velocity { get;  }
   }
 }
