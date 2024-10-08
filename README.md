@@ -1,2 +1,0 @@
-# OOAIP
- OOAIP Labs
