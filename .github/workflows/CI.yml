@@ -32,4 +32,4 @@ jobs:
       - name: Build
         run: cd Lab1 && dotnet build
       - name: Coverage and test
-        run: cd Lab1 && dotnet coverlet Lab1.Test/bin/Debug/net7.0/Lab1.Test.dll --target "dotnet" --targetargs "test --no-build" -f=opencover -o="coverage.xml"
+        run: cd Lab1 && dotnet coverlet Lab1.Test/bin/Debug/net8.0/Lab1.Test.dll --target "dotnet" --targetargs "test --no-build" -f=opencover -o="coverage.xml"
