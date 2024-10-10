@@ -1,0 +1,5 @@
+C:\4-й семестр\ООАИП\OOAIP\Lab2\Lab2\obj\Debug\net8.0\Lab2.GeneratedMSBuildEditorConfig.editorconfig
+C:\4-й семестр\ООАИП\OOAIP\Lab2\Lab2\obj\Debug\net8.0\Lab2.AssemblyInfoInputs.cache
+C:\4-й семестр\ООАИП\OOAIP\Lab2\Lab2\obj\Debug\net8.0\Lab2.AssemblyInfo.cs
+C:\4-й семестр\ООАИП\OOAIP\Lab2\Lab2\obj\Debug\net8.0\Lab2.csproj.CoreCompileInputs.cache
+C:\4-й семестр\ООАИП\OOAIP\Lab2\Lab2\obj\Debug\net8.0\Lab2.sourcelink.json

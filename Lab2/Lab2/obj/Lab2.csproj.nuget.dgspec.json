@@ -44,6 +44,24 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Hwdtech.Core": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Hwdtech.IoC": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Hwdtech.Ioc.ScopeBasedIoCImplementation": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
+            "Hwdtech.Ioc.SingleThreadScope": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
