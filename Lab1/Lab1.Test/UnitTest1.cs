@@ -1,15 +1,12 @@
 using Moq;
 using Xunit.Abstractions;
-//-reporttypes:Htmlreportgenerator -reports:"" -targetdir:"coveragereport" -reporttypes:Html
 namespace Lab1.Test
 {
     public class UnitTest1
     {
-        private readonly ITestOutputHelper _testOutputHelper;
 
-        public UnitTest1(ITestOutputHelper output)
+        public UnitTest1()
         {
-            this._testOutputHelper = output;
         }
         [Fact]
         public void Move_from_12_5_to_5_8_with_velocity_N7_3()
