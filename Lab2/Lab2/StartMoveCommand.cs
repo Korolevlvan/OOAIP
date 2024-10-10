@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Hwdtech;
 namespace Lab2
 {
-    internal class StartMoveCommand: ICommand
+    public class StartMoveCommand: ICommand
     {
         private readonly IStartMoveCommand _start;
 

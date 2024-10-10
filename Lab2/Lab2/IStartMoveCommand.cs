@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab2
 {
-    internal interface IStartMoveCommand
+    public interface IStartMoveCommand
     {
         IUObject Target { get; }
         Dictionary<string, object> Properties { get; }

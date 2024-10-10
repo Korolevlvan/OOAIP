@@ -3,3 +3,11 @@ C:\4-й семестр\ООАИП\OOAIP\Lab2\Lab2\obj\Debug\net8.0\Lab2.Assembly
 C:\4-й семестр\ООАИП\OOAIP\Lab2\Lab2\obj\Debug\net8.0\Lab2.AssemblyInfo.cs
 C:\4-й семестр\ООАИП\OOAIP\Lab2\Lab2\obj\Debug\net8.0\Lab2.csproj.CoreCompileInputs.cache
 C:\4-й семестр\ООАИП\OOAIP\Lab2\Lab2\obj\Debug\net8.0\Lab2.sourcelink.json
+C:\4-й семестр\ООАИП\OOAIP\Lab2\Lab2\bin\Debug\net8.0\Lab2.deps.json
+C:\4-й семестр\ООАИП\OOAIP\Lab2\Lab2\bin\Debug\net8.0\Lab2.dll
+C:\4-й семестр\ООАИП\OOAIP\Lab2\Lab2\bin\Debug\net8.0\Lab2.pdb
+C:\4-й семестр\ООАИП\OOAIP\Lab2\Lab2\obj\Debug\net8.0\Lab2.csproj.AssemblyReference.cache
+C:\4-й семестр\ООАИП\OOAIP\Lab2\Lab2\obj\Debug\net8.0\Lab2.dll
+C:\4-й семестр\ООАИП\OOAIP\Lab2\Lab2\obj\Debug\net8.0\refint\Lab2.dll
+C:\4-й семестр\ООАИП\OOAIP\Lab2\Lab2\obj\Debug\net8.0\Lab2.pdb
+C:\4-й семестр\ООАИП\OOAIP\Lab2\Lab2\obj\Debug\net8.0\ref\Lab2.dll

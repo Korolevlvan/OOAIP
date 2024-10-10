@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace Lab2
 {
-    internal interface IQueue
+    public interface IQueue
     {
         void Put(ICommand cmd);
         ICommand Take();
