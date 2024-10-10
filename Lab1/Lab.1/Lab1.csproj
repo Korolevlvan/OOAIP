@@ -8,10 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="MainClasses\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <EditorConfigFiles Remove="C:\4-й семестр\ООАИП\OOAIP\Lab1\Lab.1\.editorconfig" />
   </ItemGroup>
 

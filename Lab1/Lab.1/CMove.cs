@@ -10,7 +10,7 @@ namespace Lab1
 
     public class CMove : ICommand
     {
-        private readonly IMove move;
+        public readonly IMove move;
         public CMove(IMove move)
         {
             this.move = move;
@@ -19,17 +19,25 @@ namespace Lab1
         {
           move.Position += move.Velocity;
         }
-        public void Check()
+        public int Check()
         {
-          Vector.IsNotNull(move.Position);
-          Vector.IsNotNull(move.Velocity);
-        }
-        public void MoveAbilityCheck()
-        {
-          if (move.MoveAbility == new MoveAbility(false))
+          if (this.move.Position.IsNotNull() == false)
           {
-            throw new System.Exception();
+              return 1;
           }
+          if (this.move.Velocity.IsNotNull() == false)
+          {
+              return 2;
+           }
+            return 3;
+          }
+        public int MoveAbilityCheck()
+        {
+          if (move.Ability.moveability != true)
+          {
+            return 1;
+          }
+          return 2;
         }
   }
 }

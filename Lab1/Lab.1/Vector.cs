@@ -12,7 +12,9 @@ namespace Lab1
   {
     private int[] coordinates;
     private int coord_cont;
-    public Vector(params int[] coordinates)
+    private int[] a = { 0 };
+
+    public Vector(int[] coordinates)
     {
       this.coordinates = coordinates;
       this.coord_cont = coordinates.Length;
@@ -24,25 +26,20 @@ namespace Lab1
       return c;
     }
 
+    
+
     public override bool Equals(object? obj)
     {
-      if (obj == null || obj is not Vector)
-        return false;
-      else
         return coordinates.SequenceEqual(((Vector)obj).coordinates);
     }
 
-    public override int GetHashCode()
+    public Boolean IsNotNull()
     {
-      return coordinates.GetHashCode();
-    }
-    public static Vector IsNotNull(Vector a)
-    {
-      if (a.coordinates.Length == 0)
+      if (this.coord_cont < 2)
       {
-        throw new System.Exception();
+        return false;
       }
-      return a;
+      return true;
     }
   }
 }

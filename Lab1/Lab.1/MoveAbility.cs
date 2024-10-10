@@ -8,7 +8,7 @@ namespace Lab1
 {
   public class MoveAbility
   {
-    private bool moveability;
+    public bool moveability;
 
     public MoveAbility(bool moveability)
     {
