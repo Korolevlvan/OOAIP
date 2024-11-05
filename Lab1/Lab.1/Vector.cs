@@ -12,7 +12,6 @@ namespace Lab1
   {
     private int[] coordinates;
     private int coord_cont;
-    private int[] a = { 0 };
 
     public Vector(int[] coordinates)
     {
@@ -33,13 +32,5 @@ namespace Lab1
         return coordinates.SequenceEqual(((Vector)obj).coordinates);
     }
 
-    public Boolean IsNotNull()
-    {
-      if (this.coord_cont < 2)
-      {
-        return false;
-      }
-      return true;
-    }
   }
 }

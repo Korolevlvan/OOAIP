@@ -19,25 +19,5 @@ namespace Lab1
         {
           move.Position += move.Velocity;
         }
-        public int Check()
-        {
-          if (this.move.Position.IsNotNull() == false)
-          {
-              return 1;
-          }
-          if (this.move.Velocity.IsNotNull() == false)
-          {
-              return 2;
-           }
-            return 3;
-          }
-        public int MoveAbilityCheck()
-        {
-          if (move.Ability.moveability != true)
-          {
-            return 1;
-          }
-          return 2;
-        }
   }
 }
