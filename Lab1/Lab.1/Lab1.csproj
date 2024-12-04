@@ -15,4 +15,9 @@
     <None Include="C:\4-й семестр\ООАИП\OOAIP\Lab1\Lab.1\.editorconfig" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Hwdtech.IoC" Version="1.0.0" />
+    <PackageReference Include="Hwdtech.Ioc.ScopeBasedIoCImplementation" Version="1.0.0" />
+  </ItemGroup>
+
 </Project>
