@@ -17,14 +17,14 @@ namespace Lab1.Test
         {
             new InitScopeBasedIoCImplementationCommand().Execute();
 
-            IoC.Resolve<ICommand>(
+            IoC.Resolve<Hwdtech.ICommand>(
                 "Scopes.Current.Set",
                 IoC.Resolve<object>("Scopes.New",
                 IoC.Resolve<object>("Scopes.Root")))
             .Execute();
 
             var tree = new Dictionary<int, object>();
-            IoC.Resolve<ICommand>(
+            IoC.Resolve<Hwdtech.ICommand>(
                 "IoC.Register", "Game.DecisionTree",
                 (object[] args) => tree
             ).Execute();
