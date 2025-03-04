@@ -11,11 +11,11 @@ namespace Lab1
   public class ServerThread
   {
     private Action _behaviour;
-    private readonly BlockingCollection<ICommand> _queue;
+    private readonly BlockingCollection<Hwdtech.ICommand> _queue;
     private readonly Thread _thread;
     private bool _stop = false;
 
-    public ServerThread(BlockingCollection<ICommand> queue)
+    public ServerThread(BlockingCollection<Hwdtech.ICommand> queue)
     {
       _queue = queue;
 
@@ -28,7 +28,7 @@ namespace Lab1
         }
         catch (Exception e)
         {
-          IoC.Resolve<ICommand>("ExceptionHandler.Handle", cmd, e).Execute();
+          IoC.Resolve<Hwdtech.ICommand>("ExceptionHandler.Handle", cmd, e).Execute();
         }
       };
       _thread = new Thread(() =>

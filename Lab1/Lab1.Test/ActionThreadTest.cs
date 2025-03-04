@@ -82,14 +82,14 @@ namespace Lab1.Test
 
             IoC.Resolve<Hwdtech.ICommand>("IoC.Register", "pill", (object[] args) => { return pill; }).Execute();
 
-            var queueCollection = new Dictionary<Guid, BlockingCollection<ICommand>>();
+            var queueCollection = new Dictionary<Guid, BlockingCollection<Hwdtech.ICommand>>();
             var threadCollection = new Dictionary<Guid, ServerThread>();
 
             IoC.Resolve<Hwdtech.ICommand>("IoC.Register", "Server.Commands.RegisterThread", (object[] args) =>
             {
                 return new ActionCommand(() =>
                 {
-                    queueCollection.Add((Guid)args[0], (BlockingCollection<ICommand>)args[1]);
+                    queueCollection.Add((Guid)args[0], (BlockingCollection<Hwdtech.ICommand>)args[1]);
                     threadCollection.Add((Guid)args[0], (ServerThread)args[2]);
                 });
             }).Execute();
@@ -260,7 +260,7 @@ namespace Lab1.Test
             var q2 = new BlockingCollection<Hwdtech.ICommand>(100);
             var t2 = new ServerThread(q2);
 
-            var endcmd = new Mock<ICommand>();
+            var endcmd = new Mock<Hwdtech.ICommand>();
 
             var wrongSoftStop = IoC.Resolve<Hwdtech.ICommand>("Server.Commands.SoftStop", t2, () => { endcmd.Object.Execute(); });
             var softStop1 = IoC.Resolve<Hwdtech.ICommand>("Server.Commands.SoftStop", t1);
@@ -291,7 +291,7 @@ namespace Lab1.Test
         [Fact]
         public void SendCommandTest()
         {
-            Assert.Empty(IoC.Resolve<Dictionary<Guid, BlockingCollection<ICommand>>>("GetQueueCollection"));
+            Assert.Empty(IoC.Resolve<Dictionary<Guid, BlockingCollection<Hwdtech.ICommand>>>("GetQueueCollection"));
 
             var mre = new ManualResetEvent(false);
             var cmd = new Mock<Hwdtech.ICommand>();

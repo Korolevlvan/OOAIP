@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Hwdtech;
 namespace Lab1
 {
-  public class SoftStopCommand : ICommand
+  public class SoftStopCommand : Hwdtech.ICommand
   {
     private readonly ServerThread _t;
     private readonly Action _a;
@@ -29,7 +29,7 @@ namespace Lab1
           }
           else
           {
-            IoC.Resolve<ICommand>("Server.Commands.HardStop", _t, _a).Execute();
+            IoC.Resolve<Hwdtech.ICommand>("Server.Commands.HardStop", _t, _a).Execute();
           }
         };
         _t.SetBehaviour(new_behaviour);
