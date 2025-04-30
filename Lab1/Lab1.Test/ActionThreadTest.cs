@@ -250,6 +250,26 @@ namespace Lab1.Test
 
             Assert.Empty(q);
         }
+        [Fact]
+        public void SoftStop()
+        {
+            var mre = new ManualResetEvent(false);
+            var q = new BlockingCollection<Hwdtech.ICommand>(100);
+            var t = new ServerThread(q);
+            var usualCommand = new Mock<Hwdtech.ICommand>();
+            usualCommand.Setup(m => m.Execute()).Verifiable();
+            var SoftStop = IoC.Resolve<Hwdtech.ICommand>("Server.Commands.SoftStop", t);
+
+            q.Add(IoC.Resolve<Hwdtech.ICommand>("pill"));
+            q.Add(usualCommand.Object);
+            q.Add(SoftStop);
+            q.Add(usualCommand.Object);
+            q.Add(new ActionCommand(() => { mre.Set(); }));
+            t.Start();
+            mre.WaitOne();
+            usualCommand.Verify(m => m.Execute(), Times.Exactly(2));
+            Assert.Empty(q);
+        }
 
         [Fact]
         public void SoftStopCommandDoesNotStopAnotherThread()
